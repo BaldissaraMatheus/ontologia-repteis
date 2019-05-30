@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/baldi/ontologies/2019/4/untitled-ontology-5"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/baldi/ontologies/2019/4/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cobra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crânio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Espinha_Dorsal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Osso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pulmão"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Réptil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Réptil_Herbívoro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sapo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tartaruga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Órgão"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#respiraPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seAlimentaDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sapo_Geraldo"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Réptil"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#seAlimentaDe"/>
+                    <Class IRI="#Animal"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#seAlimentaDe"/>
+                    <Class IRI="#Vegetal"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possui"/>
+                <Class IRI="#Osso"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#respiraPor"/>
+                <Class IRI="#Pulmão"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Réptil_Herbívoro"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Réptil"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seAlimentaDe"/>
+                <Class IRI="#Vegetal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Cobra"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possui"/>
+                <Class IRI="#Espinha_Dorsal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#respiraPor"/>
+                <Class IRI="#Pulmão"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seAlimentaDe"/>
+                <Class IRI="#Animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Colve"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crânio"/>
+        <Class IRI="#Osso"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Espinha_Dorsal"/>
+        <Class IRI="#Osso"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pele"/>
+        <Class IRI="#Órgão"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pulmão"/>
+        <Class IRI="#Órgão"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sapo"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possui"/>
+                <Class IRI="#Espinha_Dorsal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#respiraPor"/>
+                <Class IRI="#Pele"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seAlimentaDe"/>
+                <Class IRI="#Animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tartaruga"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Animal"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possui"/>
+                <Class IRI="#Crânio"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#respiraPor"/>
+                <Class IRI="#Pulmão"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#seAlimentaDe"/>
+                <Class IRI="#Colve"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Sapo"/>
+        <NamedIndividual IRI="#Sapo_Geraldo"/>
+    </ClassAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
